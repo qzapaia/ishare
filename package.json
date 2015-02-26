@@ -1,7 +1,7 @@
 {
-  "name": "ishare",
+  "name": "weshare",
   "version": "1.0.0",
-  "description": "ishare: An Ionic project",
+  "description": "weshare: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
