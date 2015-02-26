@@ -30,5 +30,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
     controller:'LoginController',
     url: '/',
     templateUrl: 'templates/login.html'
+  });
+
+  $stateProvider.state('shared', {
+    controller:'SharedController',
+    url: '/shared',
+    templateUrl: 'templates/shared.html'
   })
+
+
 })
