@@ -1,5 +1,8 @@
 angular.module('starter')
-    .controller('LoginController', function($scope) {
+    .controller('LoginController', function($scope,searchMeli) {
+        // searchMeli.search('macbook',function(data){
+        //     $scope.data = data;
+        // })
         $scope.fbLogin = function() {
             openFB.login(
                 function(response) {
