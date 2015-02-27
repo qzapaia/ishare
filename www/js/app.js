@@ -23,20 +23,28 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   openFB.init({appId: '1551520451790569'});
 
-
-  $urlRouterProvider.otherwise('/')
-
   $stateProvider.state('home', {
     controller:'LoginController',
     url: '/',
     templateUrl: 'templates/login.html'
   });
 
-  $stateProvider.state('shared', {
-    controller:'SharedController',
-    url: '/shared',
-    templateUrl: 'templates/shared.html'
-  })
+  $stateProvider
+    .state('tab', {
+      url: "/tab",
+      abstract: true,
+      templateUrl: "templates/tabs.html"
+    })
+    .state('tab.shared', {
+      url: '/shared',
+      views: {
+        'tab-shared': {
+          templateUrl: 'templates/shared.html',
+          controller: 'SharedController'
+        }
+      }
+    });
 
+    $urlRouterProvider.otherwise('/tab/shared')
 
 })
