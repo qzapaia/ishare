@@ -33,7 +33,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('tab', {
       url: "/tab",
       abstract: true,
-      templateUrl: "templates/tabs.html"
+      templateUrl: "templates/tabsLayout.html"
     })
     .state('tab.shared', {
       url: '/shared',
